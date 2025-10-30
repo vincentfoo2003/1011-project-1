@@ -1,28 +1,68 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tool="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:padding="16dp"
     tools:context=".MainActivity">
 
     <TextView
         android:id="@+id/lastupdated"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Last updated!"
-        android:textColor="@android:color/black"
-        android:textSize="20sp" />
+        android:text="Bus Arrival Times"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+        android:layout_marginBottom="16dp"/>
+
+    <EditText
+        android:id="@+id/bus_service_number"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Bus Service Number"
+        android:focusable="false"
+        android:clickable="false"
+        android:inputType="none"
+        android:layout_marginBottom="8dp"/>
 
     <TextView
         android:id="@+id/time"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/bus_arrival_time"
-        android:textColor="@android:color/black"
+        android:text="First Bus Arrival:"
         android:textSize="20sp" />
 
+    <TextView
+        android:id="@+id/time1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Second Bus Arrival:"
+        android:textSize="20sp"
+        android:layout_marginTop="8dp"/>
+
+    <TextView
+        android:id="@+id/time2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Third Bus Arrival:"
+        android:textSize="20sp"
+        android:layout_marginTop="8dp"/>
+
+    <EditText
+        android:id="@+id/bus_stop_code"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:ems="10"
+        android:hint="Enter Bus Stop Code"
+        android:inputType="number" />
+
+    <Button
+        android:id="@+id/updatebutton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Update"
+        android:layout_marginTop="8dp"/>
 
 </LinearLayout>

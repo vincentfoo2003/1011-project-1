@@ -6,10 +6,14 @@ plugins {
 
 android {
     namespace = "com.example.a1011project"
-    compileSdk {
-        version = release(36)
-    }
+    compileSdk = 36
 
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_11
+        targetCompatibility = JavaVersion.VERSION_11
+    }
+    kotlinOptions { jvmTarget = "11"
+    }
     defaultConfig {
         applicationId = "com.example.a1011project"
         minSdk = 24
@@ -31,10 +35,6 @@ android {
             )
         }
     }
-    compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_11
-        targetCompatibility = JavaVersion.VERSION_11
-    }
     kotlinOptions {
         jvmTarget = "11"
     }
@@ -42,6 +42,7 @@ android {
         compose = true
     }
 }
+
 
 dependencies {
     implementation("com.google.code.gson:gson:2.8.9")
@@ -54,6 +55,8 @@ dependencies {
     implementation(libs.androidx.compose.ui.tooling.preview)
     implementation(libs.androidx.compose.material3)
     implementation(libs.androidx.constraintlayout)
+    implementation(libs.places)
+    implementation(libs.androidx.core.i18n)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
